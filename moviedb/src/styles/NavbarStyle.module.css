@@ -1,0 +1,141 @@
+.navbar{
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  background-color: #34393f;
+  padding: 0.5rem 1rem;
+}
+
+.leftSection{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.leftSection .navItem{
+  color: #e3e4e6;  
+  margin: 0 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rightSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20%;
+}
+
+.rightSection .navItems{
+  display: flex;
+}
+
+.rightSection .navItem{
+  color: #a9a9a9;  
+  margin: 0 0.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navItem:hover{
+  color: #fff;
+}
+
+.navbar form{
+  display: flex;
+  gap: 0.3rem;
+}
+
+.navbar input{
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+}
+
+.navbar button{
+  background-color: #6c757d;
+  color: #eee;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.navbar button:hover{
+  background-color: #5d5d5d;
+}
+
+.menuBtn{
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  display: none;
+}
+
+
+
+@media(max-width: 1024px){
+  .navbar{
+    display: grid;
+    grid-template-columns: 10% 85% 5%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftSection{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navItems{
+    display: flex;
+    background-color: rgba(0,0,0,0.9);
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    height: 8rem;
+    width: 20rem;
+    padding: 1rem;
+    right: 1rem;
+    color: #fff;
+    z-index: 10;
+    top: 3rem;
+    gap: 1rem;
+  }
+
+  .navItem{
+    color: #fff;
+    font-size: 1.2rem;
+    z-index: 12;
+  }
+
+  .navbar form{
+    width: 80%;
+  }
+
+  .menuBtn{
+    display: inline-block;
+  }
+
+}
+
+@media(max-width: 450px){
+  .navbar{
+    grid-template-columns: 25% 70% 5%;
+  }
+  .rightSection{
+    padding-inline: 0;
+  }
+  .navItems{
+    width: 15rem;
+  }
+  .navbar input{
+    width: 80%;
+  }
+}
